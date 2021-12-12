@@ -1,0 +1,19 @@
+body {
+  color: $primary-text-color;
+  background-color: $page-bgc;
+  font-family: $ff-primary;
+  letter-spacing: $primary-letter-spacing;
+  font-size: $primary-font-size;
+}
+
+.section {
+  padding: 94px 0 94px 0;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
