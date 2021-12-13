@@ -7,28 +7,17 @@
 .team {
   background-color: $team-bgc;
 
+  &__list {
+    display: block;
+  }
+
   &__title {
     @extend %h2-title;
   }
 
-  &__list {
-    display: flex;
-  }
-
-  &__card {
-    width: calc((100% - 90px) / 4);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-      0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
-    background-color: $page-bgc;
-  }
-
-  &__card:not(:last-child) {
-    margin-right: 30px;
-  }
-
-  &__info {
-    padding: 30px 32px 30px 32px;
+  &__photo {
+    width: 100%;
+    max-width: 450px;
   }
 
   &__name {
@@ -41,5 +30,64 @@
   &__position {
     @extend %team-text;
     margin-bottom: 16px;
+  }
+
+  &__card {
+    width: 100%;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    background-color: $page-bgc;
+  }
+
+  @media screen and (max-width: 767px) {
+    &__card:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__info {
+    padding: 30px 32px 30px 32px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__photo {
+      max-width: 354px;
+    }
+
+    &__card {
+      width: calc((100% - 30px) / 2);
+    }
+
+    &__card:nth-child(2n-1) {
+      margin-right: 30px;
+    }
+
+    &__card:nth-child(n-2) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &__list {
+      display: flex;
+    }
+
+    &__photo {
+      max-width: 270px;
+    }
+
+    &__card {
+      width: calc((100% - 90px) / 4);
+    }
+
+    &__card:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }

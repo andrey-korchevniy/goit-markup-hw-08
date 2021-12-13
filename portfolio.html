@@ -16,21 +16,38 @@
 
 <body>
 
-<!-- Шапка сайта -->
-  <header class="page-header">
-    <div class="menu container">
-      <nav class="header-nav">
-        <a class="logo link" href="./index.html">
-          Web<span class="logo logo--header">Studio</span>
-        </a>
+<!--======================== Шапка сайта =================================-->
+<header class="page-header">
+  <div class="container">
+    <nav class="header-nav ">
+      <!-- ---------LOGO-------- -->
+      <a class="logo link" href="./index.html">
+        Web<span class="logo logo--header">Studio</span>
+      </a>
+
+      <!-- ------- КНОПКА МОБИЛЬНОГО ОКНА ------ -->
+      <button class="menu-btn js-open-menu" type="button" aria-expanded="false" aria-controls="mobile-menu"
+        data-menu-btn>
+        <svg width="40" height="40" aria-label='Переключатель мобильного меню'>
+          <use class="menu-btn__menu" href="./images/icons.svg#menu_40px"></use>
+        </svg>
+      </button>
+
+      <!-- ---------------НАВИГАЦИЯ-------------- -->
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="menu-btn js-close-menu">
+          <svg width="40" height="40" aria-label='Переключатель мобильного меню'>
+            <use class="menu-btn__cross" href="./images/icons.svg#close_40px"></use>
+          </svg>
+        </button>
         <ul class="nav">
           <li class="nav__item">
-            <a class="nav__link link" href="./index.html">
+            <a class="nav__link nav__link link" href="./index.html">
               Студия
             </a>
           </li>
           <li class="nav__item">
-            <a class="nav__link nav__link--active link" href="./portfolio.html">
+            <a class="nav__link--active link" href="./portfolio.html">
               Портфолио
             </a>
           </li>
@@ -40,27 +57,40 @@
             </a>
           </li>
         </ul>
-      </nav>
-      <ul class="contact">
-        <li class="contact__item">
-          <a class="contact__link link" href="mailto:info@devstudio.com">
-            <svg class="contact__icon" width="16" height="16">
-              <use href="./images/icons.svg#icon-envlope"></use>
-            </svg>
-            info@devstudio.com
-          </a>
-        </li>
-        <li class="contact__item">
-          <a class="contact__link link" href="tel:+380961111111">
-            <svg class="contact__icon" width="10" height="16">
-              <use href="./images/icons.svg#icon-smartphone"></use>
-            </svg>
-            +38 096 111 11 11
-          </a>
-        </li>
-      </ul>
-    </div>
-  </header>
+
+        <!-- ---------- КОНТАКТЫ В НАВИГАЦИИ ---------------------- -->
+
+        <ul class="contact">
+          <li class="contact__item">
+            <a class="contact__link link" href="mailto:info@devstudio.com">
+              <svg class="contact__icon" width="16" height="16">
+                <use href="./images/icons.svg#icon-envlope"></use>
+              </svg>
+              info@devstudio.com
+            </a>
+          </li>
+          <li class="contact__item">
+            <a class="contact__link link" href="tel:+380961111111">
+              <svg class="contact__icon" width="10" height="16">
+                <use href="./images/icons.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11
+            </a>
+          </li>
+        </ul>
+        <ul class="social-media">
+          <li class="social-media__item"><a class="social-media__link" href="/">Instagram</a></li>
+          <li class="social-media__item"><a class="social-media__link" href="/">Twitter</a></li>
+          <li class="social-media__item"><a class="social-media__link" href="/">Facebook</a></li>
+          <li class="social-media__item"><a class="social-media__link" href="/">LinkedIn</a></li>
+        </ul>
+      </div>
+
+
+    </nav>
+  </div>
+
+</header>
 
   <main>
   <section class="portfolio section" >

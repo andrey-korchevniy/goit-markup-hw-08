@@ -1,17 +1,31 @@
 .features-list {
-  display: flex;
-}
+  display: block;
+  width: 100%;
 
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
+// -------------- КАРТОЧКА С ПРЕИМУЩЕСТВОМ ----------
 .feature {
-  width: calc((100% - 90px) / 3);
+  width: 100%;
 
   &:not(:last-child) {
-    margin-right: 30px;
+    margin-bottom: 30px;
   }
 
   &__title {
     @extend %h3-title;
     margin-bottom: 10px;
+  }
+
+  &__text {
+    line-height: 1.71;
   }
 
   &__place {
@@ -30,7 +44,19 @@
     height: 70px;
   }
 
-  &__text {
-    line-height: 1.71;
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+
+    &:nth-child(2n-1) {
+      margin-right: 30px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 90px) / 3);
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }

@@ -14,18 +14,30 @@
 </head>
 
 <body>
-<!-- Шапка сайта -->
+<!--======================== Шапка сайта =================================-->
   <header class="page-header">
+    <div class="container">
+    <nav class="header-nav ">
+<!-- ---------LOGO-------- -->
+      <a class="logo link" href="./index.html">
+        Web<span class="logo logo--header">Studio</span>
+      </a>
 
-    <div class="menu container">
+      <!-- ------- КНОПКА МОБИЛЬНОГО ОКНА ------ -->
+      <button class="menu-btn js-open-menu" type="button" aria-expanded="false" aria-controls="mobile-menu"
+        data-menu-btn>
+        <svg width="40" height="40" aria-label='Переключатель мобильного меню'>
+          <use class="menu-btn__menu" href="./images/icons.svg#menu_40px"></use>
+        </svg>
+      </button>
 
-      <nav class="header-nav">
-
-        <a class="logo link" href="./index.html">
-          Web<span class="logo logo--header">Studio</span>
-        </a>
-
-
+<!-- ---------------НАВИГАЦИЯ-------------- -->
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="menu-btn menu-btn__cross js-close-menu">
+          <svg width="40" height="40" aria-label='Переключатель мобильного меню'>
+            <use  href="./images/icons.svg#close_40px"></use>
+          </svg>
+        </button>
         <ul class="nav">
           <li class="nav__item">
             <a class="nav__link nav__link--active link" href="./index.html">
@@ -43,32 +55,44 @@
             </a>
           </li>
         </ul>
-      </nav>
 
-      <ul class="contact">
-        <li class="contact__item">
-          <a class="contact__link link" href="mailto:info@devstudio.com">
-            <svg class="contact__icon" width="16" height="16">
-              <use href="./images/icons.svg#icon-envlope"></use>
-            </svg>
-            info@devstudio.com
-          </a>
-        </li>
-        <li class="contact__item">
-          <a class="contact__link link" href="tel:+380961111111">
-            <svg class="contact__icon" width="10" height="16">
-              <use href="./images/icons.svg#icon-smartphone"></use>
-            </svg>
-            +38 096 111 11 11
-          </a>
-        </li>
-      </ul>
+        <!-- ---------- КОНТАКТЫ В НАВИГАЦИИ ---------------------- -->
+
+        <ul class="contact">
+          <li class="contact__item">
+            <a class="contact__link link" href="mailto:info@devstudio.com">
+              <svg class="contact__icon" width="16" height="16">
+                <use href="./images/icons.svg#icon-envlope"></use>
+              </svg>
+              info@devstudio.com
+            </a>
+          </li>
+          <li class="contact__item">
+            <a class="contact__link link" href="tel:+380961111111">
+              <svg class="contact__icon" width="10" height="16">
+                <use href="./images/icons.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11
+            </a>
+          </li>
+        </ul>
+        <ul class="social-media">
+          <li class="social-media__item"><a class="social-media__link" href="/">Instagram</a></li>
+          <li class="social-media__item"><a class="social-media__link" href="/">Twitter</a></li>
+          <li class="social-media__item"><a class="social-media__link" href="/">Facebook</a></li>
+          <li class="social-media__item"><a class="social-media__link" href="/">LinkedIn</a></li>
+        </ul>
+      </div>
+
+
+    </nav>
     </div>
+
   </header>
 
   <main>
 
-<!-- Блок Герой-->
+<!-- ========================Блок Герой ============================-->
     <section class="hero section">
       <h1 class="hero__title">Эффективные решения <br/> для вашего бизнеса</h1>
       <button class="button" type="button" data-modal-open>Заказать услугу</button>
@@ -146,7 +170,7 @@
         <h2 class="team__title">Наша команда</h2>
         <ul class="team__list">
           <li class="team__card">
-            <img class="team__photo" src="./images/ihordemjanenko.jpg" alt="фотография Игоря Демьяненко" width="270">
+            <img class="team__photo" src="./images/ihordemjanenko.jpg" alt="фотография Игоря Демьяненко" width="170">
             <div class="team__info">
               <h3 class="team__name">Игорь Демьяненко</h3>
               <p class="team__position">Product Designer</p>
@@ -184,7 +208,7 @@
           </li>
 
           <li class="team__card">
-            <img class="team__photo" src="./images/olharepina.jpg" alt="фотография Ольги Репиной" width="270">
+            <img class="team__photo" src="./images/olharepina.jpg" alt="фотография Ольги Репиной" width="170">
             <div class="team__info">
               <h3 class="team__name">Ольга Репина</h3>
               <p class="team__position">Frontend Developer</p>
@@ -221,7 +245,7 @@
             </div>
           </li>
           <li class="team__card">
-            <img class="team__photo" src="./images/nikolaytarasov.jpg" alt="фотография Николая Тарасова" width="270">
+            <img class="team__photo" src="./images/nikolaytarasov.jpg" alt="фотография Николая Тарасова" width="170">
             <div class="team__info">
               <h3 class="team__name">Николай Тарасов</h3>
               <p class="team__position">Marketing</p>
@@ -258,7 +282,7 @@
             </div>
           </li>
           <li class="team__card">
-            <img class="team__photo" src="./images/mihailermakov.jpg" alt="фотография Михаила Ермакова" width="270">
+            <img class="team__photo" src="./images/mihailermakov.jpg" alt="фотография Михаила Ермакова" width="170">
             <div class="team__info">
               <h3 class="team__name">Михаил Ермаков</h3>
               <p class="team__position">UI Designer</p>
@@ -299,7 +323,7 @@
     </section>
 
 <!-- Блок Наши клиенты -->
-    <section class="clients section">
+    <!-- <section class="clients section">
       <div class="container">
         <h2 class="clients__title">Постоянные клиенты</h2>
         <ul class="clients__list">
@@ -348,12 +372,12 @@
         </ul>
 
       </div>
-    </section>
+    </section> -->
 
   </main>
 
 <!-- Футер сайта -->
-<footer class="footer">
+<!-- <footer class="footer">
   <div class="footer__container container">
     <div class="footer-contacts">
         <a class="logo" href="./index.html">
@@ -428,10 +452,10 @@
 
     </div>
   </div>
-</footer>
+</footer> -->
 
 <!-- ---------------------- Модальное окно -------------------------- -->
-  <div class="backdrop is-hidden" data-modal>
+  <!-- <div class="backdrop is-hidden" data-modal>
     <div class="modal">
       <div class="close-btn" data-modal-close>
         <svg class="close-btn__svg">
@@ -477,8 +501,12 @@
           </div>
         </form>
     </div>
-  </div>
+  </div> -->
 
   <script src="./js/modal.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"></script>
+  <script defer src="./js/mobile-menu.js"></script>
 </body>
 </html>
