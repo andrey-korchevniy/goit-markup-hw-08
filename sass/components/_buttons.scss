@@ -64,6 +64,11 @@
     &__cross {
       right: 15px;
     }
+
+    &:hover,
+    &:focus {
+      fill: $accent-color;
+    }
   }
 
   display: none;

@@ -22,6 +22,7 @@
   &__title {
     @extend %h3-title;
     margin-bottom: 10px;
+    text-align: center;
   }
 
   &__text {
@@ -46,6 +47,10 @@
 
   @media screen and (min-width: 768px) {
     width: calc((100% - 30px) / 2);
+
+    &__title {
+      text-align: left;
+    }
 
     &:nth-child(2n-1) {
       margin-right: 30px;
