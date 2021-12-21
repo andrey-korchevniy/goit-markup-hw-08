@@ -65,7 +65,8 @@
 }
 
 .portfolio-card {
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
 
   &:not(:last-child) {
     margin-bottom: 30px;
@@ -81,7 +82,8 @@
   }
 
   &__photo {
-    width: 450px;
+    width: 100%;
+    // max-width: 450px;
   }
 
   &__overlay {

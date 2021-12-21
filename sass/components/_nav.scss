@@ -232,8 +232,9 @@
 
 @media screen and (max-width: 767px) {
   .social-media {
-    display: flex;
+    display: inline-flex;
     margin-top: 64px;
+    flex-wrap: wrap;
 
     &__item:not(:last-child) {
       margin-right: 10px;

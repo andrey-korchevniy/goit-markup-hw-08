@@ -484,10 +484,12 @@ body {
 
 @media screen and (max-width: 767px) {
   .social-media {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
     margin-top: 64px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .social-media__item:not(:last-child) {
     margin-right: 10px;
@@ -660,7 +662,8 @@ body {
 }
 
 .portfolio-card {
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
 }
 
 .portfolio-card:not(:last-child) {
@@ -677,7 +680,7 @@ body {
 }
 
 .portfolio-card__photo {
-  width: 450px;
+  width: 100%;
 }
 
 .portfolio-card__overlay {
