@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
     rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
-    <link rel="stylesheet" href="./css/portfolio.min.css">
+    <link rel="stylesheet" href="./css/portfolio.css">
 </head>
 
 <body>
@@ -100,17 +100,17 @@
       <!---------- Фильтр сортировки элементов ------->
       <h2 class="visually-hidden">Фильтр выбора работ</h2>
       <ul class="portfolio-chois">
-        <li class="portfolio-chois__item"><button class="portfolio-chois__btn" type="button">Все</button></li>
-        <li class="portfolio-chois__item"><button class="portfolio-chois__btn" type="button">Веб-сайты</button></li>
-        <li class="portfolio-chois__item"><button class="portfolio-chois__btn" type="button">Приложения</button></li>
-        <li class="portfolio-chois__item"><button class="portfolio-chois__btn" type="button">Дизайн</button></li>
-        <li class="portfolio-chois__item"><button class="portfolio-chois__btn" type="button">Маркетинг</button></li>
+        <li class="portfolio-chois__item"><button class="portfolio-chois__btn" type="button" data-btn="all">Все</button></li>
+        <li class="portfolio-chois__item"><button class="portfolio-chois__btn" type="button" data-btn="sites">Веб-сайты</button></li>
+        <li class="portfolio-chois__item"><button class="portfolio-chois__btn" type="button" data-btn="app">Приложения</button></li>
+        <li class="portfolio-chois__item"><button class="portfolio-chois__btn" type="button" data-btn="design">Дизайн</button></li>
+        <li class="portfolio-chois__item"><button class="portfolio-chois__btn" type="button" data-btn="marketing">Маркетинг</button></li>
       </ul>
 
       <!---------- Список работ из портфолио ---------->
       <h2 class="visually-hidden">Галерея работ</h2>
       <ul class="portfolio-list">
-        <li class="portfolio-card">
+        <li class="portfolio-card"  data-card="sites">
           <a class="portfolio-card__link" href="/">
             <div class="portfolio-card__thumb">
               <picture>
@@ -130,7 +130,7 @@
           </a>
         </li>
 
-        <li class="portfolio-card">
+        <li class="portfolio-card" data-card="design">
           <a class="portfolio-card__link" href="/">
             <div class="portfolio-card__thumb">
               <picture>
@@ -151,7 +151,7 @@
           </a>
         </li>
 
-        <li class="portfolio-card">
+        <li class="portfolio-card" data-card="app">
           <a class="portfolio-card__link" href="/">
             <div class="portfolio-card__thumb">
               <picture>
@@ -173,7 +173,7 @@
           </a>
         </li>
 
-        <li class="portfolio-card">
+        <li class="portfolio-card" data-card="marketing">
           <a class="portfolio-card__link" href="/">
             <div class="portfolio-card__thumb">
               <picture>
@@ -194,7 +194,7 @@
           </a>
         </li>
 
-        <li class="portfolio-card">
+        <li class="portfolio-card" data-card="app">
           <a class="portfolio-card__link" href="/">
             <div class="portfolio-card__thumb">
               <picture>
@@ -213,7 +213,8 @@
           </div>
           </a>
         </li>
-        <li class="portfolio-card">
+
+        <li class="portfolio-card" data-card="sites">
           <a class="portfolio-card__link" href="/">
             <div class="portfolio-card__thumb">
               <picture>
@@ -232,7 +233,8 @@
           </div>
           </a>
         </li>
-        <li class="portfolio-card">
+
+        <li class="portfolio-card" data-card="design">
           <a class="portfolio-card__link" href="/">
             <div class="portfolio-card__thumb">
               <picture>
@@ -253,7 +255,7 @@
           </a>
         </li>
 
-        <li class="portfolio-card">
+        <li class="portfolio-card" data-card="marketing">
           <a class="portfolio-card__link" href="/">
             <div class="portfolio-card__thumb">
               <picture>
@@ -274,7 +276,7 @@
           </a>
         </li>
 
-        <li class="portfolio-card">
+        <li class="portfolio-card" data-card="app">
           <a class="portfolio-card__link" href="/">
             <div class="portfolio-card__thumb">
               <picture>
@@ -372,6 +374,7 @@
     integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
     crossorigin="anonymous"></script>
   <script defer src="./js/mobile-menu.js"></script>
+  <script src='./js/js-portfolio.js'></script>
 
 </body>
 </html>
